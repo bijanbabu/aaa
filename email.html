@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Email Login Form</title>
+</head>
+<body>
+	<h1>Email Login Form</h1>
+	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>
+		<label> Email:</label>
+		<input type="text" name="email"><br>
+		<label>Password:</label>
+		<input type="password" name="password"><br>
+		<input type="submit" value="Login">
+	</form>
+
+</body>
+</html>

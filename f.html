@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Email and Password Validation Example</title>
+    <script type="text/javascript">
+        function validateForm() {
+            var email = document.getElementById("email").value;
+           var password = document.getElementById("password").value;
+            if (validateEmail(email) && validatePassword(password)) {
+                alert("Validation successful!");
+            } else {
+                alert("Validation failed. Please check your email and password.");
+            }
+        }
+
+        function validateEmail(email) {
+            var emailRegex = /[a-z A-z 0-9]{3,}@[a-z A-Z]{3,}[.]{1}[a-z A-Z]{3,}/;
+            return emailRegex.test(email);
+        }
+
+        function validatePassword(password) {
+           var passwordRegex = /[a-z0-9@#$%^&*]{5,20}/;
+            return passwordRegex.test(password);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Email and Password Validation Example</h1>
+    <form>
+        <label>Email:</label>
+        <input type="text" id="email" name="email"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <input type="button" onclick="validateForm()" name="check" value="Login"></br>
+    </form>
+</body>
+
+</html>
